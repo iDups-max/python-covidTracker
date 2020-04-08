@@ -8,17 +8,24 @@ uh.set_pixel(2, 0, 0, 0, 255)
 uh.show()
 
 import requests as r
+import json #needed?
+from datetime import datetime
 
+lastDate = r.get('https://covidapi.info/api/v1/latest-date').text
+data = r.get('https://covidapi.info/api/v1/country/GBR/latest').json()
 
-# url = "https://covidapi.info/api/v1/global"
+confirmed = data['result'][lastDate]['confirmed']
+deaths = data['result'][lastDate]['deaths']
 
-response = r.get('https://covidapi.info/api/v1/country/GBR/latest')
-print(response.text)
+print{confirmed, deaths}
 
+# todayDate = datetime.today().strftime('%Y-%m-%d')
+# print(todayDate)
 
+# data = json.dumps(response, indent=2) #converts to json
+# print(type(data))
+# print(data)
 
-
-
-
+print('')
 print("Press ENTER to exit.")
 input() #makes script consistent
