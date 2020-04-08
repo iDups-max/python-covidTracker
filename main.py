@@ -12,13 +12,13 @@ import requests as r
 
 # url = "https://covidapi.info/api/v1/global"
 
-response = r.get('https://covidapi.info/api/v1/global')
-print(response.headers)
+response = r.get('https://covidapi.info/api/v1/country/GBR/latest')
+print(response.text)
 
 
 
 
 
 
-print("running main.py")
+print("Press ENTER to exit.")
 input() #makes script consistent
