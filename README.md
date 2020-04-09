@@ -4,10 +4,10 @@ covidTracker is a small python script that shows covid-19 info in CLI + ona  uni
 
 ## How to use.
 
-Clone into any rpi.
+Clone repo
 
 ```bash
-https://github.com/anton25360/python-covidTracker.git
+git clone https://github.com/anton25360/python-covidTracker.git
 ```
 Run ```sudo python main.py``` to start.
 
