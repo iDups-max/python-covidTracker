@@ -2,14 +2,7 @@ import unicornhat as uh
 uh.set_layout(uh.PHAT) #uses small layout
 uh.brightness(0.3)
 
-# uh.set_pixel(0, 0, 255, 0, 0)
-# uh.set_pixel(1, 0, 0, 255, 0)
-# uh.set_pixel(2, 0, 0, 255, 0)
-# uh.set_pixel(3, 0, 0, 255, 0)
-# uh.show()
-
 import requests as r
-import json #needed?
 from datetime import datetime
 
 lastDate = r.get('https://covidapi.info/api/v1/latest-date').text
@@ -30,8 +23,6 @@ print 'confirmed recoveries: ' , recovered
 # print str(deaths)[0]
 
 deathsThousands = deaths / 1000
-# deathsThousands = 20
-print deathsThousands
 
 for i in range(deathsThousands):    
     uh.set_pixel(i, 3, 255, 0, 0)
