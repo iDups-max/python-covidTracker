@@ -1,6 +1,6 @@
 # covidTracker
 
-covidTracker is a small python script that shows covid-19 info in CLI + ona  unicorn pHAT.
+covidTracker is a small python script that shows covid-19 info in CLI + on a  unicorn pHAT.
 
 ## How to use.
 
