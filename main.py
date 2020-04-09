@@ -17,14 +17,8 @@ data = r.get('https://covidapi.info/api/v1/country/GBR/latest').json()
 confirmed = data['result'][lastDate]['confirmed']
 deaths = data['result'][lastDate]['deaths']
 
-print{confirmed, deaths}
-
-# todayDate = datetime.today().strftime('%Y-%m-%d')
-# print(todayDate)
-
-# data = json.dumps(response, indent=2) #converts to json
-# print(type(data))
-# print(data)
+print 'confirmed cases: ' , confirmed
+print 'confirmed deaths: ' , deaths
 
 print('')
 print("Press ENTER to exit.")
