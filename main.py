@@ -2,10 +2,11 @@ import unicornhat as uh
 uh.set_layout(uh.PHAT) #uses small layout
 uh.brightness(0.3)
 
-uh.set_pixel(0, 0, 255, 0, 0)
-uh.set_pixel(0, 1, 0, 255, 0)
-uh.set_pixel(2, 0, 0, 0, 255)
-uh.show()
+# uh.set_pixel(0, 0, 255, 0, 0)
+# uh.set_pixel(1, 0, 0, 255, 0)
+# uh.set_pixel(2, 0, 0, 255, 0)
+# uh.set_pixel(3, 0, 0, 255, 0)
+# uh.show()
 
 import requests as r
 import json #needed?
@@ -26,6 +27,15 @@ print ''
 print 'confirmed cases: ' , confirmed
 print 'confirmed deaths: ' , deaths
 print 'confirmed recoveries: ' , recovered
+# print str(deaths)[0]
+
+for i in range(int(str(deaths)[0])):
+  uh.set_pixel(i, 3, 255, 0, 0)
+
+for i in range(int(str(recovered)[0])):
+  uh.set_pixel(i, 0, 0, 255, 0)
+
+uh.show()
 
 print ''
 print 'Press ENTER to exit.'
