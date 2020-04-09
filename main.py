@@ -24,6 +24,7 @@ print 'confirmed recoveries: ' , recovered
 
 deathsThousands = deaths / 1000
 
+#up to 3 rows of deaths
 for i in range(deathsThousands):    
     uh.set_pixel(i, 3, 255, 0, 0)
 
@@ -34,6 +35,10 @@ for i in range(deathsThousands):
     if deathsThousands > 16:
         for i in range(deathsThousands - 16):    
             uh.set_pixel(i, 1, 255, 0, 0) #line 3
+
+#last row
+for i in range(8):    
+    uh.set_pixel(i, 0, 0, 25, 250)
 
 
 uh.show()
