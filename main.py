@@ -29,11 +29,21 @@ print 'confirmed deaths: ' , deaths
 print 'confirmed recoveries: ' , recovered
 # print str(deaths)[0]
 
-for i in range(int(str(deaths)[0])):
-  uh.set_pixel(i, 3, 255, 0, 0)
+deathsThousands = deaths / 1000
+# deathsThousands = 20
+print deathsThousands
 
-for i in range(int(str(recovered)[0])):
-  uh.set_pixel(i, 0, 0, 255, 0)
+for i in range(deathsThousands):    
+    uh.set_pixel(i, 3, 255, 0, 0)
+
+    if deathsThousands > 8:
+        for i in range(deathsThousands - 8):    
+            uh.set_pixel(i, 2, 255, 0, 0) #line 2
+
+    if deathsThousands > 16:
+        for i in range(deathsThousands - 16):    
+            uh.set_pixel(i, 1, 255, 0, 0) #line 3
+
 
 uh.show()
 
