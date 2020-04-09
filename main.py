@@ -16,10 +16,17 @@ data = r.get('https://covidapi.info/api/v1/country/GBR/latest').json()
 
 confirmed = data['result'][lastDate]['confirmed']
 deaths = data['result'][lastDate]['deaths']
+recovered = data['result'][lastDate]['recovered']
+
+print ''
+print 'UK stats, last updated',lastDate
+print ''
+
 
 print 'confirmed cases: ' , confirmed
 print 'confirmed deaths: ' , deaths
+print 'confirmed recoveries: ' , recovered
 
-print('')
-print("Press ENTER to exit.")
+print ''
+print 'Press ENTER to exit.'
 input() #makes script consistent
